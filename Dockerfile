@@ -1,16 +1,10 @@
-FROM alpine:3.5
-MAINTAINER Daniel Guerra
-ADD /apk /apk
-RUN cp /apk/.abuild/-58b83ac3.rsa.pub /etc/apk/keys
-RUN apk --no-cache --update add /apk/x11vnc-0.9.13-r0.apk
-RUN apk --no-cache add xvfb openbox xfce4-terminal supervisor sudo \
-&& addgroup alpine \
-&& adduser  -G alpine -s /bin/sh -D alpine \
-&& echo "alpine:alpine" | /usr/sbin/chpasswd \
-&& echo "alpine    ALL=(ALL) ALL" >> /etc/sudoers \
+FROM alpine:latest
+RUN apk add x11vnc xvfb supervisor firefox \
+&& addgroup bnuuy \
+&& adduser  -G bnuuy -s /bin/sh -D bnuuy \
 && rm -rf /apk /tmp/* /var/cache/apk/*
 ADD etc /etc
-WORKDIR /home/alpine
-EXPOSE 5900
-USER alpine
+WORKDIR /home/bnuuy
+EXPOSE 5900 5901
+USER bnuuy
 CMD ["/usr/bin/supervisord","-c","/etc/supervisord.conf"]
