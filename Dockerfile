@@ -1,5 +1,5 @@
 FROM alpine:latest
-RUN apk add x11vnc xvfb supervisor firefox \
+RUN apk add xorg-server xf86-input-libinput eudev xspice supervisor font-noto firefox \
 && addgroup bnuuy \
 && adduser  -G bnuuy -s /bin/sh -D bnuuy \
 && rm -rf /apk /tmp/* /var/cache/apk/*
