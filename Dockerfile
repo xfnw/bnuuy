@@ -9,7 +9,7 @@ RUN mkdir /tmp/audio_fifo\
 && echo "load-module module-null-sink" >> /etc/pulse/default.pa \
 && echo "load-module module-always-sink" >> /etc/pulse/default.pa \
 && echo "load-module module-x11-publish" >> /etc/pulse/default.pa \
-&& echo "load-module module-pipe-sink sink_name=fifo_output file=/tmp/audio_fifo/audio.fifo format=s16 rate=48000 channels=2" >> /etc/pulse/default.pa
+&& echo "load-module module-pipe-sink sink_name=fifo_output file=/tmp/audio_fifo/audio.fifo format=s16 rate=44100 channels=2" >> /etc/pulse/default.pa
 WORKDIR /home/bnuuy
 ADD mozilla .mozilla/
 RUN chown -R bnuuy:bnuuy .mozilla/ /tmp/audio_fifo
