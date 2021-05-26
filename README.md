@@ -1,6 +1,9 @@
 # bnuuy
 little deployable firefoxes uwu
 
+![Screenshot of bnuuy in action](https://camo.githubusercontent.com/902d81be7eaa2140dff77ab208edbacfad60ceb5598b0950ab2e6ef9d9f7be9e/68747470733a2f2f74746d2e73682f4677372e706e67)
+
+
 at `568MB` its pretty big. most of that is firefox though.
 you can omit some of the codecs and fonts to save like 50MB, but
 then most webpages will be half-broken
