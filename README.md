@@ -22,7 +22,7 @@ docker build -t xfnw/bnuuy .
 ## running it
 this is just an example, you probably want different flags for your usecase
 ```
-docker run -p 5900:5900 -p 5959:5959 -it xfnw/bnuuy
+docker run -p 5900:5900 -p 5800:5800 -it xfnw/bnuuy
 ```
 
 in this example, you can point your web browser to 5959 or a spice client to 5900 

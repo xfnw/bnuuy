@@ -16,5 +16,5 @@ RUN git clone https://github.com/novnc/websockify websocketify
 ADD mozilla .mozilla
 ADD spice-html5 spice-html5
 RUN chown -R bnuuy:bnuuy .mozilla spice-html5 websocketify /tmp/audio_fifo
-EXPOSE 5900 5959
+EXPOSE 5900 5800
 CMD ["/usr/bin/supervisord","-c","/etc/supervisord.conf"]
