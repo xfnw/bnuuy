@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM alpine:3.14
 RUN apk add git dbus-x11 xorg-server xf86-input-libinput eudev xspice supervisor firefox pulseaudio pulseaudio-alsa \
 && apk add gst-plugins-base gst-plugins-good gst-plugins-bad ttf-freefont ttf-opensans ttf-dejavu ttf-linux-libertine \
 && addgroup bnuuy \
